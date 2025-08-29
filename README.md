@@ -1,25 +1,59 @@
-# Hardware Code for Stroke Detection System
+1.Project Title
 
-This folder contains the ESP32 code used to run the real-time stroke detection system.
+*AI-BCI System for Early Detection of Stroke with Real-time Assistance using EEG Signals*
 
-## Components
-- ESP32 Development Board
-- SIM800L GSM Module
-- LCD Display (16x2 or I2C)
-- EEG signals were from the dataset
-- Power supply
+2.Introduction
 
-## Features
-- Loads the trained TensorFlow Lite model for inference
-- Continuously monitors EEG signals
-- Detects stroke-like patterns
-- Sends emergency SMS alert via SIM800L
+This project is an AI-powered Brain-Computer Interface (BCI) system that detects early signs of stroke using EEG signals in real-time. It uses Edge Impulse ML model, ESP32, and SIM800L GSM module to send emergency alerts via SMS when a possible stroke is detected.
 
-## Upload Instructions
-1. Open `sketch_jun16a_copy_20250829120554.ino` in Arduino IDE
-2. Install required libraries:
-   - `TensorFlowLite_ESP32`
-   - `LiquidCrystal_I2C` (for LCD)
-   - `SoftwareSerial` (for SIM800L)
-3. Select **ESP32 Dev Module** board
-4. Upload the code
+3. Features
+
+-Real-time EEG monitoring using ESP32
+
+-Stroke detection using Edge Impulse ML model
+
+-GSM-based emergency alert system (SIM800L)
+
+-LCD display for system status
+
+-Low-cost and portable design
+
+4. Hardware Requirements
+
+-ESP32
+
+-SIM800L GSM Module
+
+-LCD (I2C 16x2)
+
+-EEG Sensor Module
+
+-Jumper wires, Breadboard, Power Supply
+
+5. Software Requirements
+
+-Arduino IDE
+
+-Edge Impulse SDK
+
+-TinyGSM Library
+
+-LiquidCrystal_I2C Library
+
+6. Circuit Diagram
+![Circuit_digram](https://github.com/user-attachments/assets/0fbfbf7c-8c11-4f25-9847-34d88b10da43)
+
+7. How It Works
+
+-EEG signals are read by the ESP32.
+
+-Data is passed into the Edge Impulse ML model deployed on ESP32.
+
+-If stroke probability > 70%, the system triggers an alert.
+
+-The SIM800L sends an SMS to the emergency contact.
+
+-LCD displays the status in real-time.
+
+
+
