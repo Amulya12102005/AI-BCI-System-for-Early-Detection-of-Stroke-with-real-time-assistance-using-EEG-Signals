@@ -21,7 +21,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2); // Change to 0x3F if needed
 TinyGsm modem(SerialAT);
 
 // ====================== EMERGENCY CONFIG ======================
-#define EMERGENCY_NUMBER "+919346323028"  // Your phone number
+#define EMERGENCY_NUMBER "0000000000"  // Your phone number
 
 bool messageSent = false;
 
